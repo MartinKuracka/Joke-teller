@@ -1,7 +1,8 @@
 const myButton = document.getElementById('button');
 const audioElement = document.getElementById('audio');
 const errorMessage = document.getElementById('message');
-let response;
+const repeatButton = document.getElementById('repeat-button');
+let jokeResponse;
 let fullJoke;
 
 // Get the Joke from API
@@ -15,6 +16,7 @@ async function joke() {
         } else {
             fullJoke = response.joke;
         }
+        jokeResponse = fullJoke;
         sendJoke(fullJoke);
     } catch(err) {
         errorMessage.hidden = false;      
@@ -22,10 +24,10 @@ async function joke() {
 }
 
 // Send text joke to speech API
-sendJoke = (response) => {
+sendJoke = (jokeResponse) => {
     VoiceRSS.speech({
         key: 'd4bb3b3e69504439b7518ca9b6f461c7',
-        src: response,
+        src: jokeResponse,
         hl: 'en-us',
         v: 'Linda',
         r: 0,
@@ -40,3 +42,5 @@ const VoiceRSS={speech:function(e){this._validate(e),this._request(e)},_validate
 
 //  Event listeners
 myButton.addEventListener('click', () => joke() );
+repeatButton.addEventListener('click', () => sendJoke(fullJoke) );
+

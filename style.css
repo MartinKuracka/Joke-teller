@@ -6,6 +6,13 @@ html {
   box-sizing: border-box;
 }
 
+p {
+  padding: 5px;
+  background-color: #34bfff;
+  border: 2px solid gray;
+  border-radius: 3px;
+}
+
 body {
   margin: 0;
   background-color: #ebeee9;
