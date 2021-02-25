@@ -10,9 +10,11 @@
 <body>
     <div class="container">
         <button id="button">Tell Me A Joke</button>
-        <audio id="audio" controls></audio>
+        <audio id="audio" controls hidden></audio>
+        <p id='message' hidden>Sorry, can not get joke from the server at the moment</p>
     </div>
     <!-- Script -->
+    <script src="https://unpkg.com/sv443-joke-api@0.0.8/web/index.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
