@@ -68,7 +68,7 @@ button:disabled {
 @media only screen and (max-width: 800px) {
   .container {
     background-position:top;
-    background-size: contain;
+    background-size: 80vw;
   }
 
   button {
