@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');s
 
 /* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
 
@@ -62,6 +63,28 @@ button:disabled {
   cursor: default;
   filter:brightness(30%)
 }
+
+/* footer */
+
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0px;
+}
+
+.footer img {
+  width: 100px;
+  height:auto;
+  /* color: var(--on-background); */
+}
+.f-text {
+  font-family: 'Lato', sans-serif;
+  color: var(--on-background);
+}
+
 
 /* media querries */
 
